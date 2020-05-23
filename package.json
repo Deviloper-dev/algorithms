@@ -1,0 +1,24 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Algorithms and Data structures practice implementations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iyogeshjoshi/algorithms.git"
+  },
+  "keywords": [
+    "algorithms",
+    "data",
+    "structures"
+  ],
+  "author": "Yogi <iyogeshjoshi@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iyogeshjoshi/algorithms/issues"
+  },
+  "homepage": "https://github.com/iyogeshjoshi/algorithms#readme"
+}
