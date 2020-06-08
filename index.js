@@ -2,10 +2,9 @@ const { Command } = require('commander')
 const program = new Command()
 
 // Sorting Algos
-const { bruteforce, quicksort } = require('./sorting')
+const { bruteforce, mergesort, quicksort } = require('./sorting')
 
-// let input = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-let input = [10, 8, 6, 4, 2, 1, 3, 5, 7, 9];
+let input = [10, 5, 2, 7, 4, 9, 12, 1, 8, 6, 11, 3];
 
 
 function processInput(value) {
@@ -37,6 +36,7 @@ function sort(source) {
 
   let quicksortSource = Array.from(source);
   let bruteforceSource = Array.from(source);
+  let mergesortSource = Array.from(source);
 
   console.time('quicksort');
   quicksort(quicksortSource, 0, quicksortSource.length - 1);
@@ -46,7 +46,11 @@ function sort(source) {
   bruteforce(bruteforceSource);
   console.timeEnd('bruteforce');
 
-  process.exit(0);
+  console.time('mergesort');
+  mergesort(mergesortSource);
+  console.timeEnd('mergesort');
+
+  process.exit();
 }
 
 // call
