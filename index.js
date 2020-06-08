@@ -35,20 +35,20 @@ function sort(source) {
   }
 
   let quicksortSource = Array.from(source);
-  let bruteforceSource = Array.from(source);
   let mergesortSource = Array.from(source);
+  let bruteforceSource = Array.from(source);
 
   console.time('quicksort');
-  quicksort(quicksortSource, 0, quicksortSource.length - 1);
+  quicksort(quicksortSource);
   console.timeEnd('quicksort');
-
-  console.time('bruteforce');
-  bruteforce(bruteforceSource);
-  console.timeEnd('bruteforce');
 
   console.time('mergesort');
   mergesort(mergesortSource);
   console.timeEnd('mergesort');
+
+  console.time('bruteforce');
+  bruteforce(bruteforceSource);
+  console.timeEnd('bruteforce');
 
   process.exit();
 }

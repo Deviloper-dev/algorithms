@@ -7,6 +7,15 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Quick",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/sorting/quick.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Algorithm",
       "skipFiles": [
         "<node_internals>/**"
