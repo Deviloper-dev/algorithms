@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Algorithms and Data structures practice implementations",
   "main": "index.js",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,29 @@
   "bugs": {
     "url": "https://github.com/iyogeshjoshi/algorithms/issues"
   },
-  "homepage": "https://github.com/iyogeshjoshi/algorithms#readme"
+  "homepage": "https://github.com/iyogeshjoshi/algorithms#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-dashboard": "^0.3.1"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "clover",
+      "json",
+      "lcov"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "linkes": 80,
+        "statements": -10
+      }
+    },
+    "reporters": [
+      "jest-dashboard",
+      "summary"
+    ]
+  }
 }
